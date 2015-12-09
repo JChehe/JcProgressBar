@@ -71,14 +71,14 @@
         animation: progress-bar-stripes 2s linear infinite
     }
     /* .process:after{
-			content: "";
-			position: absolute;
-			right: 0;
-			height: 3px;
-			width: 6%;
-			background-color: transparent;
-			box-shadow: 3px 0px 8px 1px red, -28px 0 6px 1px red, -57px 0 8px 0 red;
-		} */
+            content: "";
+            position: absolute;
+            right: 0;
+            height: 3px;
+            width: 6%;
+            background-color: transparent;
+            box-shadow: 3px 0px 8px 1px red, -28px 0 6px 1px red, -57px 0 8px 0 red;
+        } */
     </style>
 </head>
 
@@ -95,6 +95,12 @@
     </div>
     <script src="JcProgressBar.js"></script>
     <script>
+    var myProcess = new JcProgressBar({
+        id: "my-progress",
+        height: "14px",
+        backgroundColor: "red"
+    }, "#child")
+
     $$ = document.querySelector.bind(document);
 
     $$("#finish").onclick = function(event) {

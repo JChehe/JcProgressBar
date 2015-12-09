@@ -1,33 +1,3 @@
-var $$ = document.querySelector.bind(document);
-
-function getStyle(domObj, styleStr) {
-    if (document.defaultView.getComputedStyle) {
-        return document.defaultView.getComputedStyle(domObj, null)[styleStr];
-    } else {
-        return domObj.style.currentStyle[style];
-    }
-}
-
-
-/*function whichTransitionEvent() {
-    var t;
-    var el = document.createElement('fakeelement');
-    var transitions = {
-        'transition': 'transitionend',
-        'msTransition': 'msTransitionEnd',
-        'OTransition': 'oTransitionEnd',
-        'MozTransition': 'transitionend',
-        'WebkitTransition': 'webkitTransitionEnd'
-    }
-
-    for (t in transitions) {
-        if (el.style[t] !== undefined) {
-            return transitions[t];
-        }
-    }
-}
-var supportedTransitionEnd = whichTransitionEvent();*/
-
 function JcProgressBar(options, root) {
     this.progress = 0,
         this.root = root,
@@ -163,8 +133,3 @@ JcProgressBar.prototype.fade = function(){
 JcProgressBar.prototype.destroy = function(cb){
     this.progressDom.parentNode.removeChild(this.progressDom)
 }
-var myProcess = new JcProgressBar({
-    id: "my-progress",
-    height: "14px",
-    backgroundColor: "red"
-}, "#child")
